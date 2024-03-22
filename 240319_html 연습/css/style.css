@@ -47,3 +47,20 @@ h1 + h2{    /*h1과h3는 자매여야한다.h1바로 아랫자매가 h3에 적�
 h1 ~ h2{    /*h1과h3가 자매여야함.h1 아랫자매 모든 h3에 적용*/
     background-color: greenyellow;
 }
+[type="text"]{  /*type속성의 값이 text인 아이에 적용*/
+background-color: lavender;
+}
+/* 홀수번째 자매 중 li인 애들에 적용 */
+li:nth-child(2n-1){
+    font-size: 40px;
+}
+li:nth-child(odd){ /*홀수:odd,2n-1*/
+    /* font-size: 8px; */
+}
+li:nth-child(even){ /*짝수:even,2n*/
+    /* font-weight: 200; */
+}
+/* Honey Tip */
+body > ul:nth-child(30) > li.japan {
+    font-size: 200px;
+}
