@@ -30,9 +30,9 @@ TAG         :HTML TAG
 
 [속성="값"]         :<TAG 속성="값"><\TAG>
 
-선택자:first-child()    :첫째 자식
-선택자:nth-child(N)     :N번째 자식
-선택자:last-child()     :막내 자식
+선택자:first-child    :첫째 자식
+선택자:nth-child(N)   :N번째 자식
+선택자:last-child     :막내 자식
 
 선택자:hover            :마우스 올리면 선택되는 선택자
 ```
@@ -46,6 +46,6 @@ TAG         :HTML TAG
 4. .class    
 5. TAG   
 6. `*`
--구체 > 포괄
--가까이 > 멀리
+-구체 > 포괄   
+-가까이 > 멀리   
 -나중에 적용이 더 크다
