@@ -2,3 +2,48 @@ h1{
     color: #3333;
     /* #=빛의 강도 */
 }
+li{
+    background-color: antiquewhite;
+}
+ul > ul >li{        /*ul자식 ul자식 li에 적용*/
+    background-color: aqua;
+    /* li이 태그 글자 뒤에 색이 적용된다. */
+    /* 화살표를 통해    바로 아래 자식만 설정할 수 있다.> */
+}
+ul > li{        /*ul 바로 아래 자식 li에 적용*/
+    background-color: azure;
+    /* bacco 백그라운드 컬러 */
+}
+.korea{
+    color: black
+}
+.japan{
+    color: crimson
+}
+.incheon{
+    color: lightsteelblue;
+}
+#leader{
+    color: darkorchid;
+}
+li:first-child{ /*첫째인데 li인 아이*/
+    font-weight: bold;
+}
+li:last-child{  /*막내인데 li인 아이*/
+    font-style: italic;
+}
+li:nth-child(3){
+    color: hotpink;
+}
+li:nth-child(2n) { /*짝수번째인데 li인 아이 (시험문제)*/
+    background-color: aliceblue;
+}
+h1, h3{     /*h1과h3에 모두 적용*/
+    /* background-color: gainsboro; */
+}
+h1 + h2{    /*h1과h3는 자매여야한다.h1바로 아랫자매가 h3에 적용*/
+    background-color: yellow;
+}
+h1 ~ h2{    /*h1과h3가 자매여야함.h1 아랫자매 모든 h3에 적용*/
+    background-color: greenyellow;
+}
