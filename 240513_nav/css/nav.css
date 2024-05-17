@@ -22,6 +22,42 @@
 
     /* nav */
     --nav-height: 44px;
+
     
-    
+}
+/* nav */
+body{
+    font-family: 'Cute Font', sans-serif;
+    background-color: var(--body-color);
+}
+body>header{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    /* 위치를 내 마음대로 움직일 수 있음absolute 이게 절대값, 고정시킴 */
+}
+nav.container{
+    background-color: var(--primary-color);
+    height: var(--nav-height);
+    display: flex; /*가로로배치*/
+    justify-content: space-between; /*메인축(가로)으로 양쪽정렬*/
+    align-items: center; /*교차축(세로)로 가운데 정렬*/
+    padding: 0 80px; /*왼/오른만 양쪽여백*/
+    color: #fff;
+    font-size: var(--h2-font-sizer); /*웹폰ㅌ 아이콘,글자 크게*/
+}
+nav a{
+    color: #fff;
+}
+nav-logo{
+    margin-top: 5px;
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    column-gap: 40px; /*열 사이에 간격*/
+}
+.nav-toggle{
+    display: none; /*사라져*/
 }
