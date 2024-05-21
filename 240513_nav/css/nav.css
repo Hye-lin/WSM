@@ -57,6 +57,7 @@ nav-logo{
     display: flex;
     align-items: center;
     column-gap: 40px; /*열 사이에 간격*/
+    transition: 0.4s ease-in-out; /*애니메이션*/
 }
 .nav-toggle{
     display: none; /*사라져*/
@@ -65,15 +66,18 @@ nav-logo{
 @media screen and (max-width: 600px) { /*600px이하일때 스타일*/
     nav.container{
         padding: 0 20px; /*왼/오른 여백 조금 줄이자*/
+       
     }
     .nav-list{
         flex-direction: column; /*세로로배치*/
         background-color: hsla(200, 100%, 25%, 0.6);
         /*bacco단축기*/
         position:absolute;
-        top: var(--nav-height);
+        top: calc (var(--nav-height) - 140px); /*실제 위치는 44px-140px (이게 탑의 위치) (- 옆에 꼭  띄어쓰기 있어야함,연산자와 연산자 사이)*/
         right: 0;
         left: 0;
+        z-index: -1; /*nav뒤에 숨기자*/
+        
     }
     .nav-item{
         padding: 0.5rem 0; /*메뉴 아이템 세로 간격 벌리자*/
@@ -86,6 +90,9 @@ nav-logo{
     }
     .nav-toggle{
         display: block; /*햄버거 메뉴 보여라*/
+        cursor: pointer; /*x표시에 누르면 손 모양으로 바뀌게 해줌*/
     }
-    
+    .show-menu{
+        top: nav(--nav-height); /*nav-list 아래로 내리자*/
+    }
 }
