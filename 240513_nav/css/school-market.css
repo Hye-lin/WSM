@@ -1,40 +1,92 @@
-#school-market{
-        margin-top: calc(var(--nav-height) + 100px);
-    }
-    #school-market{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 28px;
-    }
-    .search-container{
-    background-color: #dcdc;
+#school-market {
+    margin-top: calc(var(--nav-height) + 100px);
+}
+
+#school-market {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-container {
+    background-color: #dcdcdc;
     padding: 10px 20px;
     display: flex;
     align-items: center;
     border-radius: 28px;
     min-width: 500px;
     width: 80%;
-    max-width: 800px;
+    max-width: 800%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-    #search-bar{
-        font-size: var(--h2font-size);
-        background: none;   /*입력창 배경 사라져*/
-        border: none;       /*입력창 외곽선 사라져*/
-        flex-grow: 1; /*나를 감싼 container에 여유공간 생기면, 나를 늘려라(돋보기?)*/
+}
 
+#search-bar {
+    font-size: var(--h2-font-size);
+    background: none;       /* 입력창 배경 사라짐 */
+    border: none;       /* 입력창 외곽선 사라짐 */
+    flex-grow: 1;       /* 나를 감싼 container에 여유 공간 생기면, 나를 늘려라 */
+    /* border-bottom: 2px solid;     // 검색창 밑에 선 추가 할 수 있음 */
+}
+
+#search-bar:focus {
+    outline: none;      /* 입력창 focus 시, 외곽선 사라짐 */
+}
+
+.search-container > i {
+    font-size: var(--h2-font-size);
+    margin-top: 4px;
+}
+
+.product-container {
+    margin: 0 100px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ededed;
+    padding: 30px;
+    border-radius: 40px;
+    position: relative; /* 내 자손중 postion:absolute;인 아이의 기준이 화면 전체가 아니라 내가 된다.*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    /* height: 200px; */
+    aspect-ratio: 1/1;     /* 이미지 너비(앞), 이미지 높이(뒤) 비율 */
+    object-fit: contain;      /* cover : 공간에 맞게 확대, 짤림; contain: 공간에 맞게 축소, 여백 생김 */
+    border-radius: 10px;
+    background-color: white;
+}
+
+.product-name {
+    background-color: #dcdcdc;
+    padding: 4px 30px;
+    font-size: var(--h2-font-size);
+    border-radius: 19px;
+    position:absolute;
+    bottom: -19px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+@media screen and (max-width:976px) {
+    #school-market {
+        margin-top: calc(var(--nav-height) + 30px);
     }
-    #search-bar:focus{
-        outline: none;  /*입력창focus 시 외곽선 사라짐*/
+
+}
+
+/*모바일*/
+@media screen and (max-width:800px) {
+    .product-container{
+        justify-content: center;
     }
-    .search-container >i {
-        font-size: var(--h2-font-size);
-        margin-top: 4px;
-    }
-    @media screen and (max-width:976px) {
-        #school-market {
-            margin-top: calc(var(--nav-height) + 30px);
-        }
-    
-    }
+}
