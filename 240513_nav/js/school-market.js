@@ -1,3 +1,5 @@
+let alldata;
+
 const showData = (data) =>{
     // console.log(data)
     //data 하나씩 뽑아서 <article>(아티클)->.product-container 의 자식으로 넣자<-html
@@ -18,6 +20,7 @@ const showData = (data) =>{
         
 
 const setData = (data) =>{
+    allData = data;
     showData(data);
     
     //무뚝뚝.wedp 출력하자
@@ -37,3 +40,11 @@ const getData =  (() =>{
     .catch((error)=> console.log(error));
 });
 getData();
+const searchData = (query) =>{
+    console.log(query)
+    //data 하나씩 꺼내어,name이랑 비교해서 query비교해서 있으면, 모아놓자
+    // data.filter -단축기
+    let searchData = allData.filter((oneData) => oneData["name"].includes(query));
+    showData(searchData);
+    
+}
