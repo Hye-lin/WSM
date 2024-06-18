@@ -14,9 +14,9 @@
     display: flex;
     align-items: center;
     border-radius: 28px;
-    min-width: 500px;
+    min-width: 400px;
     width: 80%;
-    max-width: 800%;
+    max-width: 800px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -59,7 +59,7 @@
 }
 
 .product-image {
-    /* height: 200px; */
+    height: 200px;
     aspect-ratio: 1/1;     /* 이미지 너비(앞), 이미지 높이(뒤) 비율 */
     object-fit: contain;      /* cover : 공간에 맞게 확대, 짤림; contain: 공간에 맞게 축소, 여백 생김 */
     border-radius: 10px;
