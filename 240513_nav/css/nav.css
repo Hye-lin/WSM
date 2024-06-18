@@ -32,6 +32,7 @@
 body{
     font-family: var(--body-font);
     background-color: var(--body-color);
+    
 }
 
 body>header{
@@ -39,6 +40,7 @@ body>header{
     top: 0;
     right: 0;
     left: 0;
+    z-index: 10; /*검색기능이 뒤로 들어감*/
 }
 
 nav.container {
@@ -86,6 +88,7 @@ nav a{
          right: 0;  /* 옆으로 퍼지게 하기*/
          left: 0;
          z-index: -1; /* nav뒤에 숨기기*/
+         backdrop-filter: blur(4px); /*배경 흐리게*/
     }
 
     .nav-item{
@@ -102,6 +105,7 @@ nav a{
     .nav-toggle{
         display: block;     /* 햄버거 바 보이기 */
         cursor: pointer;    /*가져다대면 손으로 바뀜*/
+        margin-top: 6px; /*햄버거바와 x온라인 가운대 조정*/
     }
 
     .show-menu{  /*클래스 만들기*/
