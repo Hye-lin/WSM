@@ -97,7 +97,7 @@ nav a{
         border-bottom: 1px solid white;
         width: 100%;    /* 가로 너미 100% */
         text-align: center; /* 글자 가운데 */
-    }
+    }   
 
     .nav-link{
         display: block; /*중요 : 링크의 너비: 콘텐츠크기만큼 -> 100%로 늘리기 */
