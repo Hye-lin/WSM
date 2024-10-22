@@ -35,3 +35,29 @@ main {
     max-width: 600px; */
     width: min(100% 600px); /*600px보다 크면, 60px, 작으면 100%*/
 }
+#calender {
+    /* 논 은 캘린더 가릴 수 있음 */
+    display: none;
+}
+#selecton-washingmachine-time {
+    margin-top: 100px;
+}
+.flex-container {
+    display: flex;
+    column-gap: 20px;
+}
+#dormitory select {
+    font-size: var(--h2-font-size); /*글자크기 */
+    border: none; /*외각선(?) */
+    background-color: #f0f0f0;
+    border-radius: 25px; /*버튼의 둥글기 */
+    padding: 15px 20px; /*깎이는거 여유롭게 */
+    /* 버튼들 디자인 */
+}
+.btn {
+    font-size: var(--h2-font-size);
+    padding: 10px 20px;
+    margin-top: 40px;
+    float: right; /*다음 버튼 오른쪽으로 옮기기 (감싸고있는 컨테이너 젤 오른쪽으로 감) */
+    /*다음 버튼 */
+}
