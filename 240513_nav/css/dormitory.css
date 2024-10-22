@@ -35,18 +35,21 @@ main {
     max-width: 600px; */
     width: min(100% 600px); /*600px보다 크면, 60px, 작으면 100%*/
 }
-#calender {
+#calender,
+#selectoin-washingmachine-time {
     /* 논 은 캘린더 가릴 수 있음 */
     display: none;
 }
-#selecton-washingmachine-time {
+#selecton-washingmachine-time,
+#selection-room-name {
     margin-top: 100px;
 }
 .flex-container {
     display: flex;
     column-gap: 20px;
 }
-#dormitory select {
+#dormitory select,
+#dormitoty input {
     font-size: var(--h2-font-size); /*글자크기 */
     border: none; /*외각선(?) */
     background-color: #f0f0f0;
