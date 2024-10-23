@@ -35,13 +35,15 @@ main {
     max-width: 600px; */
     width: min(100% 600px); /*600px보다 크면, 60px, 작으면 100%*/
 }
-#calender,
-#selectoin-washingmachine-time {
+#calendar,
+#selection-washingmachine-time,
+#selection-room-name {
     /* 논 은 캘린더 가릴 수 있음 */
     display: none;
 }
-#selecton-washingmachine-time,
-#selection-room-name {
+#selection-washingmachine-time,
+#selection-room-name,
+#board {
     margin-top: 100px;
 }
 .flex-container {
@@ -49,7 +51,7 @@ main {
     column-gap: 20px;
 }
 #dormitory select,
-#dormitoty input {
+#dormitory input {
     font-size: var(--h2-font-size); /*글자크기 */
     border: none; /*외각선(?) */
     background-color: #f0f0f0;
@@ -63,4 +65,19 @@ main {
     margin-top: 40px;
     float: right; /*다음 버튼 오른쪽으로 옮기기 (감싸고있는 컨테이너 젤 오른쪽으로 감) */
     /*다음 버튼 */
+}
+.board-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    gap: 1px;
+}
+#board .header {
+    background-color: beige;
+}
+#board .item {
+    color:black;
+    font-size: var(--h2-font-size);
+    border: 1px solid  gray;
+    height: 40px;
+    padding: 5px 10px;
 }
