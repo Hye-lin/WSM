@@ -22,7 +22,9 @@ const setPage = (page) => { //함수를 만든거임
     }
 
     //selection 칠하자
-    selectionItemDivs[page-1].classList.add("select-menu");
+    if (page != 4){ //세탁기 예약 현환표 selection이 없음
+        selectionItemDivs[page-1].classList.add("select-menu");
+    }
 
     //clear pageDiv
     pageDivs.forEach(pageDiv => {
