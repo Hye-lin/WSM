@@ -81,8 +81,10 @@ const setCalendar = (date) => {
     for (let date = 1; date <= lastDate.getDate(); date++) {
         let currentMonthDateDiv = document.createElement("div");
         currentMonthDateDiv.className = "item";
-        currentMonthDateDiv.textContent = date;    
-        calendarContainerDiv.appendChild(currentMonthDateDiv); 
+        currentMonthDateDiv.onclick = (event) => clickDate(event)  //<div class="item" onclick = "clickDate"</div>
+        currentMonthDateDiv.dataset.date = `${year}-${month+1}-${date}`; 
+        currentMonthDateDiv.textContent = date;    //<div class="item">1</div>
+        calendarContainerDiv.appendChild(currentMonthDateDiv);  //<div id="celendar - container"></div>
     }
 
     // 다음 달 앞날짜 구하자
